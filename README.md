@@ -3,24 +3,24 @@ Make an Etch a Sketch (with an stm32)!
 
 ## A brief description of our project and what it will be able to do:
 
-An etch a sketch with two knobs (potentiometers) that will record motion to a LCD screen allowing the drawing of images. Additionally using an accelerometer the user will be able to shake the screen and reset their drawing
+An etch-a-sketch with two knobs (potentiometers) that will record motion to an LCD screen allowing the drawing of images. Additionally using an accelerometer the user will be able to shake the screen and reset their drawing. A user can also switch between screens by tilting the etch-a-sketch, and screens are saved using an SD card and loaded on power up.
 
- - An ability to display graphics on the TFT display using SPI protocol and external interface
- - An ability to receive and translate analog directional information using the internal ADC peripheral
- - An ability to use internal timers to control display and game flow in real time
- - An ability to use an external I2C accelerometer to interrupt and clear the screen
+ - An ability to display a traced line on the TFT display using SPI protocol
+ - An ability to receive and translate analog voltages into positional information using the internal ADC peripheral
+ - An ability to save and retrieve screens/drawings to an SD card
+ - An ability to use an external I2C accelerometer to clear the screen or change between saved drawings
 
 ## Main features of our project:
-Our etch-a-sketch will have 3 external components: the TFT LCD display, the two potentiometers, and an I2C Accelerometer, and 2 potentiometers for X and Y control.
+Our etch-a-sketch will have 3 external components: the TFT LCD display & SD card reader, the two potentiometers, and an I2C Accelerometer, and 2 potentiometers for X and Y control.
 
-The TFT LCD display and potentiometers are already in our lab kits, although we may procure better potentiometers from the ECE shop which has a drawer full. We also plan on using an I2C accelerometer to shake the board and clear the screen. For this, we would like to use https://www.adafruit.com/product/2019?gad_source=1&gclid=Cj0KCQjwu-63BhC9ARIsAMMTLXQVQhPq4wVcWrk7dFT_t-0NDRVO2zZFT1a4A0YmWToC_e04hHX0ia0aAqd-EALw_wcB
+The TFT LCD display/SD card reader and potentiometers are already in our lab kits, although we may procure better potentiometers from the ECE shop which has a drawer full. We also plan on using an I2C accelerometer to shake the board and clear the screen. For this, we would like to use https://www.adafruit.com/product/2019?gad_source=1&gclid=Cj0KCQjwu-63BhC9ARIsAMMTLXQVQhPq4wVcWrk7dFT_t-0NDRVO2zZFT1a4A0YmWToC_e04hHX0ia0aAqd-EALw_wcB
 which we will purchase when our project has been approved (or find an alternative I2C accelerometer in the ECE shop if they have one).
 
 
 ## Eternal interface formats our project will use:
-Our system will take in input from 2 different external sources: a potentiometer/knobs/joysticks, and an accelerometer. These parts should be readily available in the ECE shop or cheap to purchase. We will choose whatever is optimal for the constraints of this project without needing to purchase extra parts. 
+Our system will take in input from 2 different external sources: two potentiometers, and an accelerometer. These parts should be readily available in the ECE shop or cheap to purchase. We will choose whatever is optimal for the constraints of this project without needing to purchase extra parts. 
 These external parts will utilize the following formats:
- - SPI for display
+ - SPI for display & SD card reader
  - Analog for input of knobs
  - I2C for accelerometer
 
@@ -33,18 +33,12 @@ The 4 internal peripheral subsystems that our project is gonna use are:
 
 ## Planned timeline for completing the various steps of our project:
 
-Week 9: Submission DEADLINE (10/14)
 Schematic complete 10/21
 Pseudocode complete 10/21
-Week 10: Breadboard Practical
 Breadboard Done 10/26
 Initial Code Complete 11/2
-1 week to debug
 Final integration complete 11/9
-1 week to buffer
 Project works by 11/16
-Week 14: Demo DEADLINE (11/22)
-
 
 ## Related published projects, products, or articles that you found that are similar to our project:
 
