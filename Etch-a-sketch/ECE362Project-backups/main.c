@@ -14,7 +14,6 @@ void init_tim6(void) {
     TIM6->CR2 |= TIM_CR2_MMS_1;
 }
 
-
 void init_tim6(void) { 
     //Enable RCC clock for TIM6 
     RCC->APB1ENR |= RCC_APB1ENR_TIM6EN; 
